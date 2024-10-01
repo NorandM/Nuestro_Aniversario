@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Nuestra historia de amor</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments"></span><br />
+				<span class="space"/><span class="comments">Hace un año desde que te conocí,</span><br />
+				<span class="space"/><span class="comments">y desde entonces no he parado de pensar en ti.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Quiero agradecerte  <span class="keyword">por amarme</span> y <span class="string">hacer de mi mundo un lugar  mejor</span>;<br />
+				Desde entonces, eres tú<span class="keyword"> ,Norith Aylen,</span>  <span class="string">la chica a quién amo.</span>;<br />
+				<span class="comments">//El 31 de Agosto del 2023, empezó nuestra historia. </span><br />
+				Y desde entonces eres tú y solamente tú;<br />
+				<span class="comments">//Te abrí mi corazón y lo cerré al resto, solo para que tú lo puedas tener</span><br />
+				Eres tú a quien elijo por encima del resto.<br />
+				<span class="comments">//Y te elegiré siempre, porque no quiero que faltes a mi lado</span><br />	
+				Porque no te quiero perder.<br />
+				<span class="comments">//Y si tengo que dejar el orgullo y rencor atrás, no dudaré en hacerlo si así me quedo a tu lado.</span><br />
+				Porque cuidaré de ti.<br />
+				<span class="comments">//Ese es mi deber ahora, cuidar lo que amo.</span><br />
+				<span class="comments">//Y darte lugar como mi enamorada, proteger lo nuestro y darte mi cobijo.</span><br />
+				<span class="keyword">Mi amor, </span> sin importar lo <span class="keyword">complicado que todo se ponga</span>;<br />
+				<span class="keyword">Mientras yo esté aquí</span> será mi lucha también {<br />
+				<span class="placeholder"/>No estás sola<br />
+				<span class="placeholder"/><span class="comments">//Y nunca lo estarás, porque yo estaré ahí</span><br />
+				<span class="placeholder"/><span class="comments">//hasta cuando todo parezca perdido.</span><br />
+				<span class="placeholder"/>Sola toma mi mano, y del resto yo me ocupo.<br />
+				}<br />
+				<span class="comments">//Nos espera un camino lleno de obstáculos y desafíos.</span><br />
+				Pero es no es nada<br />
+				Si tengo que superarlos para quedarme a tu lado, que vengas todos los posibles, porque no me iré sin ti.💖<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Gracias por ser tú de quien me enamoré.
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Mi corazón es tuyo Norith Aylen<br/>
+						<div class="signature">- Andre Hermoza</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2024 <a href='https://www.canva.com/design/DAGMpH-j44Y/7TvcX8Tb0Gd5mU6mvTaIbA/edit?utm_content=DAGMpH-j44Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>Andre.Hermoza</a> 2023-2024
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2023, 7, 31 );
+		together.setHours(24);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
